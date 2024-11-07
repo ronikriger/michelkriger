@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- External CSS (if any) -->
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Scape</title>
     <style>
-        /* Additional CSS for a cooler look */
+        /* Updated CSS for a cooler look */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f3f4;
@@ -17,52 +20,64 @@
         }
 
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') center/cover no-repeat;
             color: #fff;
-            padding: 50px;
+            padding: 100px 20px;
             text-align: center;
-            font-size: 1.5em;
+            position: relative;
         }
 
         header h1 {
-            font-size: 3em;
-            margin: 10px 0;
+            font-size: 4em;
+            margin: 0 0 20px;
             color: #ffcc00;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            background: #333;
             display: flex;
             justify-content: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
 
         nav li {
-            margin: 0 15px;
+            margin: 0;
         }
 
         nav a {
-            padding: 15px;
+            display: block;
+            padding: 15px 20px;
             color: #fff;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
 
         nav a:hover {
+            background: #444;
             color: #ffcc00;
         }
 
         .panel {
-            padding: 50px 20px;
+            padding: 60px 20px;
             margin: auto;
-            max-width: 800px;
+            max-width: 1000px;
             transition: transform 0.3s, background-color 0.3s;
         }
 
@@ -72,21 +87,55 @@
         }
 
         .panel:nth-child(odd) {
-            background-color: #add8e6;
+            background-color: #f0f8ff; /* AliceBlue */
         }
 
         .panel:nth-child(even) {
-            background-color: #ffe4e1;
+            background-color: #f5f5f5; /* LightGray */
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p, ul, ol {
+            color: #555;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            padding-left: 40px;
+            text-align: left;
+        }
+
+        ul li, ol li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #005f99;
         }
 
         .footer-spacer {
-            height: 50px;
+            height: 100px;
         }
 
         footer {
             background: linear-gradient(135deg, #4caf50, #388e3c);
             color: #fff;
-            padding: 20px;
+            padding: 30px 20px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -94,7 +143,7 @@
         }
 
         footer p {
-            margin: 5px;
+            margin: 5px 0;
         }
 
         footer .social-icons {
@@ -129,9 +178,46 @@
     </nav>
     <section id="welcome" class="panel">
         <h2>Bem-vindo à Solar Scape!</h2>
-        <p>Iluminamos o seu caminho para um futuro sustentável com instalação de painéis solares e gestão de energia de ponta. Transforme sua jornada rumo a um estilo de vida mais verde conosco.</p>
+        <p>Na Solar Scape, iluminamos o seu caminho para um futuro sustentável, especializando-nos na logística de instalação de painéis solares e gestão de energia. Nossa expertise garante uma instalação sem contratempos e armazenamento eficiente de energia usando medidores de luz de última geração, tornando suas contas de energia mais econômicas. Sua jornada em direção a uma vida mais verde acaba de se tornar mais luminosa e acessível conosco.</p>
     </section>
-    <!-- Additional sections here -->
+    <section id="mission" class="panel">
+        <h2>Nossa Missão</h2>
+        <p>Embarcando em uma missão rumo a um mundo mais sustentável, a Solar Scape se dedica a fornecer serviços de instalação de painéis solares incomparáveis. Nos esforçamos para tornar a energia limpa e abundante acessível a todos, contribuindo assim para um futuro mais verde e sustentável para o nosso planeta e para as gerações futuras.</p>
+    </section>
+    <section id="energy-storage" class="panel">
+        <h2>Armazenamento de Energia</h2>
+        <p>Nossas soluções inovadoras de armazenamento de energia, apoiadas por medidores de luz avançados, garantem que a energia gerada pelos seus painéis solares seja armazenada de maneira eficiente. Isso assegura que você tenha acesso a uma energia limpa e confiável, otimizando também os seus custos com energia, refletindo o nosso compromisso com a sustentabilidade e acessibilidade em cada feixe de luz.</p>
+    </section>
+    <section id="solar-panels-info" class="panel">
+        <h2>O que é um Painel Solar?</h2>
+        <p>O painel solar é o equipamento essencial para gerar energia fotovoltaica. Ele capta a energia solar e converte a luz do sol em energia elétrica através das células fotovoltaicas, fabricadas a partir de materiais semicondutores como o silício. Quando os fótons atingem essas células, os elétrons são deslocados, criando uma corrente elétrica e gerando a energia solar fotovoltaica. Os painéis solares necessitam de mínima manutenção e não prejudicam o meio ambiente, sendo uma solução eficaz para o aquecimento de água e geração de eletricidade.</p>
+    </section>
+    <section class="panel">
+        <h2>Para que Serve e Como Funciona?</h2>
+        <p>O painel solar serve para coletar fótons da luz solar e convertê-los em corrente elétrica, sendo uma alternativa excelente para a geração de energia limpa. Ele funciona quando os fótons colidem com os átomos do material semicondutor do painel, causando o deslocamento dos elétrons e, assim, criando uma corrente elétrica conhecida como energia solar fotovoltaica.</p>
+    </section>
+    <section id="panel-types" class="panel">
+        <h2>Tipos de Painel Solar</h2>
+        <ol>
+            <li>Painel solar de silício monocristalino</li>
+            <li>Painel solar de silício policristalino</li>
+            <li>Painel solar de silício amorfo (a-Si)</li>
+            <li>Painel solar de telureto de cádmio (CdTe)</li>
+            <li>Painel solar de seleneto de cobre, índio e gálio (CIS /CIGS)</li>
+            <li>Células fotovoltaicas orgânicas (OPV)</li>
+            <li>Painel solar híbrido - HJT</li>
+        </ol>
+    </section>
+    <section id="learn-more" class="panel">
+        <h2>Saiba Mais</h2>
+        <ul>
+            <li><a href="https://www.portalsolar.com.br/painel-solar" target="_blank">Portal Solar</a></li>
+            <li><a href="https://www.neosolar.com.br/loja/painel-solar.html" target="_blank">NeoSolar</a></li>
+            <li><a href="https://brasilescola.uol.com.br/geografia/energia-solar.htm" target="_blank">Brasil Escola</a></li>
+            <li><a href="https://www.uol.com.br/ecoa/ultimas-noticias/2023/01/17/energia-solar-o-que-e-e-como-funciona.htm" target="_blank">UOL - Ecoa</a></li>
+            <li><a href="https://www.iberdrola.pt/casa/energia-solar/paineis-solares" target="_blank">Iberdrola</a></li>
+        </ul>
+    </section>
     <div class="footer-spacer"></div>
     <footer>
         <p>&copy; 2023 Solar Scape - Todos os direitos reservados.</p>
@@ -143,4 +229,3 @@
     </footer>
 </body>
 </html>
-
