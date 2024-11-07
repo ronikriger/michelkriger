@@ -1,164 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Include Font Awesome for social media icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- External CSS (if any) -->
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Scape</title>
     <style>
-        /* Updated CSS for a cooler look */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f3f4;
-            scroll-behavior: smooth;
+            background-color: #f8f8f8;
             text-align: center;
         }
 
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') center/cover no-repeat;
+            background-color: #4caf50;
             color: #fff;
-            padding: 100px 20px;
-            text-align: center;
-            position: relative;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         header h1 {
-            font-size: 4em;
-            margin: 0 0 20px;
-            color: #ffcc00;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+            font-size: 2em;
         }
 
         header p {
-            font-size: 1.5em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        nav {
-            background: #333;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            color: #fff;
         }
 
         nav ul {
-            list-style: none;
+            list-style-type: none;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
+            overflow: hidden;
+            background-color: #333;
         }
 
         nav li {
-            margin: 0;
+            display: inline;
         }
 
         nav a {
-            display: block;
-            padding: 15px 20px;
-            color: #fff;
-            font-size: 1.1em;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            transition: background 0.3s, color 0.3s;
         }
 
         nav a:hover {
-            background: #444;
-            color: #ffcc00;
+            background-color: #ddd;
+            color: black;
         }
 
         .panel {
-            padding: 60px 20px;
+            padding: 20px;
             margin: auto;
-            max-width: 1000px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .panel:hover {
-            transform: translateY(-10px);
-            background-color: #e6f7ff;
+            max-width: 800px;
         }
 
         .panel:nth-child(odd) {
-            background-color: #f0f8ff; /* AliceBlue */
+            background-color: #add8e6; /* Azul claro */
         }
 
         .panel:nth-child(even) {
-            background-color: #f5f5f5; /* LightGray */
+            background-color: #ffe4e1; /* Rosa cor de pele */
         }
 
-        h2 {
+        h1, h2 {
             color: #333;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
         }
 
         p, ul, ol {
-            color: #555;
+            color: #666;
             font-size: 1.2em;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 20px;
             text-align: justify;
         }
 
         ul, ol {
-            padding-left: 40px;
+            padding-left: 20px;
             text-align: left;
         }
 
-        ul li, ol li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #007acc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #005f99;
-        }
-
-        .footer-spacer {
-            height: 100px;
-        }
-
         footer {
-            background: linear-gradient(135deg, #4caf50, #388e3c);
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50;
             color: #fff;
-            padding: 30px 20px;
             position: fixed;
             width: 100%;
             bottom: 0;
-            text-align: center;
         }
 
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer .social-icons {
-            margin-top: 10px;
-        }
-
-        footer .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-
-        footer .social-icons a:hover {
-            color: #ffcc00;
+        .footer-spacer {
+            height: 50px;
         }
     </style>
 </head>
@@ -172,7 +113,7 @@
             <li><a href="#welcome">Bem-vindo</a></li>
             <li><a href="#mission">Nossa Missão</a></li>
             <li><a href="#energy-storage">Armazenamento de Energia</a></li>
-            <li><a href="#solar-panels-info">Painéis Solares</a></li>
+            <li><a href="#solar-panels-info">Informações sobre Painéis Solares</a></li>
             <li><a href="#learn-more">Saiba Mais</a></li>
         </ul>
     </nav>
@@ -181,11 +122,11 @@
         <p>Na Solar Scape, iluminamos o seu caminho para um futuro sustentável, especializando-nos na logística de instalação de painéis solares e gestão de energia. Nossa expertise garante uma instalação sem contratempos e armazenamento eficiente de energia usando medidores de luz de última geração, tornando suas contas de energia mais econômicas. Sua jornada em direção a uma vida mais verde acaba de se tornar mais luminosa e acessível conosco.</p>
     </section>
     <section id="mission" class="panel">
-        <h2>Nossa Missão</h2>
+        <h2>Nossa Missão:</h2>
         <p>Embarcando em uma missão rumo a um mundo mais sustentável, a Solar Scape se dedica a fornecer serviços de instalação de painéis solares incomparáveis. Nos esforçamos para tornar a energia limpa e abundante acessível a todos, contribuindo assim para um futuro mais verde e sustentável para o nosso planeta e para as gerações futuras.</p>
     </section>
     <section id="energy-storage" class="panel">
-        <h2>Armazenamento de Energia</h2>
+        <h2>Armazenamento de Energia:</h2>
         <p>Nossas soluções inovadoras de armazenamento de energia, apoiadas por medidores de luz avançados, garantem que a energia gerada pelos seus painéis solares seja armazenada de maneira eficiente. Isso assegura que você tenha acesso a uma energia limpa e confiável, otimizando também os seus custos com energia, refletindo o nosso compromisso com a sustentabilidade e acessibilidade em cada feixe de luz.</p>
     </section>
     <section id="solar-panels-info" class="panel">
@@ -221,11 +162,6 @@
     <div class="footer-spacer"></div>
     <footer>
         <p>&copy; 2023 Solar Scape - Todos os direitos reservados.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
     </footer>
 </body>
 </html>
